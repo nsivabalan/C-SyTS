@@ -6,6 +6,7 @@ Few components are required to get this system up and running.
 Celery and python is expected to be installed in local as well as all remote node. Both celery.py and tasks.py(where we create a celery instance, and where we define our tasks) should be located in all nodes.
 
 Make sure Rabbitmq server and redis is installed in atleast one machine and make all nodes refer to the server hosting it. 
+Once the set up is ready, make sure worker nodes are up and running while listening to queues 'wnode1', 'wnode2' and 'wnode3'. These have to modified to fetch programmatically through celery.
 
 Driver is used to send tasks as input to schedulers. Driver takes in a parameter of scheduler type (FCFS/Random) based on which the corresponding Scheduler is invoked. While trying out FCFS Scheduler or Randomized Scheduler, don't forget to have mymonitor.py running in the background in order to get the total turn around time.
 
