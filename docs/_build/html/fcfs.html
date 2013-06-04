@@ -55,9 +55,11 @@
 <h1>FCFS Scheduler<a class="headerlink" href="#fcfs-scheduler" title="Permalink to this headline">¶</a></h1>
 <p>FCFS Scheduler is readily available from C-SyTS. FCFS assigns tasks in the order they arrive. Tasks are assigned in a round robin fashion to the available worker nodes.</p>
 <p>Driver module should be used to send tasks to our C-SyTS. It takes as input the type of scheduler to be used for task execution. Tasks are generated on the fly within driver module. You can modify it to generate your own tasks if required.</p>
-<div class="section" id="invoking-fcfs-scheduler">
-<h2>Invoking FCFS Scheduler<a class="headerlink" href="#invoking-fcfs-scheduler" title="Permalink to this headline">¶</a></h2>
-<p>python Driver.py FCFS</p>
+<div class="section" id="invoking-fcfs-scheduler-to-assign-tasks">
+<h2>Invoking FCFS Scheduler to assign tasks<a class="headerlink" href="#invoking-fcfs-scheduler-to-assign-tasks" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>schedulerObj = FCFSScheduler([&#8220;wnode1&#8221;,&#8221;wnode2&#8221;,&#8221;wnode3&#8221;]) # wnode* represents worker nodes
+schedulerObj.assignTasks(&#8220;client1&#8221;,taskslist)              # tasklist represents list of tasks</div></blockquote>
 <p>If you wish to monitor the task success event, run mymonitor.py as a separate thread.</p>
 <p>Please make sure to modify broker url and backend url in your celery instance. Also the available worker nodes are hard-coded as of now in Driver.py module. Also, ensure that the task being invoked is actually defined in the application being used and is available in all remote worker nodes being used during task execution.</p>
 </div>
@@ -72,7 +74,7 @@
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">FCFS Scheduler</a><ul>
-<li><a class="reference internal" href="#invoking-fcfs-scheduler">Invoking FCFS Scheduler</a></li>
+<li><a class="reference internal" href="#invoking-fcfs-scheduler-to-assign-tasks">Invoking FCFS Scheduler to assign tasks</a></li>
 </ul>
 </li>
 </ul>

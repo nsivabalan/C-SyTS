@@ -5,10 +5,11 @@ FCFS Scheduler is readily available from C-SyTS. FCFS assigns tasks in the order
 
 Driver module should be used to send tasks to our C-SyTS. It takes as input the type of scheduler to be used for task execution. Tasks are generated on the fly within driver module. You can modify it to generate your own tasks if required.
 
-Invoking FCFS Scheduler
+Invoking FCFS Scheduler to assign tasks
 -----------------------
 
-python Driver.py FCFS
+    schedulerObj = FCFSScheduler(["wnode1","wnode2","wnode3"]) # wnode* represents worker nodes
+    schedulerObj.assignTasks("client1",taskslist)              # tasklist represents list of tasks
 
 
 If you wish to monitor the task success event, run mymonitor.py as a separate thread.

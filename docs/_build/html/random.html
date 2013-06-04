@@ -57,7 +57,9 @@
 <p>Driver module should be used to send tasks to our C-SyTS. It takes as input the type of scheduler to be used for task execution. Tasks are generated on the fly within driver module. You can modify it to generate your own tasks if required.</p>
 <div class="section" id="invoking-randomized-scheduler">
 <h2>Invoking Randomized Scheduler<a class="headerlink" href="#invoking-randomized-scheduler" title="Permalink to this headline">¶</a></h2>
-<p>python Driver.py Random</p>
+<blockquote>
+<div>schedulerObj = RandomizedScheduler([&#8220;wnode1&#8221;,&#8221;wnode2&#8221;,&#8221;wnode3&#8221;]) # wnode* represents worker nodes
+schedulerObj.assignTasks(&#8220;client1&#8221;,taskslist)              # tasklist represents list of tasks</div></blockquote>
 <p>If you wish to monitor the task success event, run mymonitor.py as a separate thread.</p>
 <p>Please make sure to modify broker url and backend url in your celery instance. Also the available worker nodes are hard-coded as of now in Driver.py module. Also, ensure that the task being invoked is actually defined in the application being used and is available in all remote worker nodes being used during task execution.</p>
 </div>

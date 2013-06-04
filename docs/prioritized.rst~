@@ -1,0 +1,15 @@
+Prioritized Scheduler
+=====================
+
+Prioritized Scheduler is readily available from C-SyTS. Prioritized Scheduler assigns tasks based on the priority of each tasks. Incoming tasks can belong to either of high priority or low priority. High priority tasks are denoted as 0 and low priority as 1. Prioritized Scheduler gurantees a SLA of 30 mins for all high priority tasks and 60 mins for all low priority tasks. Tasks are generated on the fly within Prioritized Scheduler module. You can modify it to generate your own tasks if required.
+
+Invoking Prioritized Scheduler
+------------------------------
+
+python PrioritizedScheduler.py
+
+
+Please make sure to modify broker url and backend url in your celery instance. Also the available worker nodes are hard-coded as of now in QLBS.py module. Also, ensure that the task being invoked is actually defined in the application being used and is available in all remote worker nodes being used during task execution.
+
+
+

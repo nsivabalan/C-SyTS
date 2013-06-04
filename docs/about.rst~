@@ -1,0 +1,13 @@
+About
+=====
+
+C-SyTS is a Cloud based multi-tasking Job Scheduler. It offers various scheduling mechanisms to choose from such as FCFS, Randomized, Queue Length Based Scheduler and Prioritized Scheduler.
+
+It uses celery for scheduling and task management purposes. Celery is an asynchronous task queue/job queue based on distributed message passing. It is focused on real-time operation and supports scheduling as well. RabbitMQ Server is used as the messaing broker for mediating messages between scheduler and remote worker nodes. Redis is used as the result backend. It provides persistency and easy to use interface.
+
+Get it
+------ 
+
+You can clone the repository by doing the following:
+	
+$ git clone git://github.com/nsivabalan/C-SyTS.git
