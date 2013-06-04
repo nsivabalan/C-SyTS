@@ -1,5 +1,5 @@
-Weclome to Cloud based multi-tasking Task Scheduling[C-SyTS] 
-!
+Weclome to Cloud based multi-tasking Task Scheduling[C-SyTS] !
+
 This is a task scheduling engine which assigns tasks to remote instances through various scheduling mechanisms.
 
 Few components are required to get this system up and running. 
