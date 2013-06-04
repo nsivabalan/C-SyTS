@@ -1,0 +1,15 @@
+Queue Length Based Scheduler
+============================
+
+QLBS is readily available from C-SyTS. QLBS assigns tasks based on the queue length of each worker node. Every tasks approximate execution times are retrieved from the redis database which is learnt from previous experiences. Tasks are generated on the fly within QLBS module. You can modify it to generate your own tasks if required.
+
+Invoking QLBS
+-------------
+
+python QLBS.py
+
+
+Please make sure to modify broker url and backend url in your celery instance. Also the available worker nodes are hard-coded as of now in QLBS.py module. Also, ensure that the task being invoked is actually defined in the application being used and is available in all remote worker nodes being used during task execution.
+
+
+

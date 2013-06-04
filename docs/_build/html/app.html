@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Application &mdash; C-SyTS 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="C-SyTS 1.0 documentation" href="index.html" />
+    <link rel="next" title="Queue Length Based Scheduler" href="qlbs.html" />
+    <link rel="prev" title="Choosing the Result Backend" href="resultbackend.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="qlbs.html" title="Queue Length Based Scheduler"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="resultbackend.html" title="Choosing the Result Backend"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">C-SyTS 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="application">
+<h1>Application<a class="headerlink" href="#application" title="Permalink to this headline">¶</a></h1>
+<p>We need Celery instance and tasks defined before we try out our schedulers.</p>
+<p>In this tutorial you will keep everything contained in a single module.</p>
+<div class="section" id="creating-task">
+<h2>Creating Task<a class="headerlink" href="#creating-task" title="Permalink to this headline">¶</a></h2>
+<p>Let’s create the file tasks.py:</p>
+<p>from celery import Celery</p>
+<p>celery = Celery(&#8216;tasks&#8217;, broker=&#8217;amqp://guest&#64;localhost//&#8217;,backend=&#8217;&#8216;)</p>
+<p>&#64;celery.task
+def add(x, y):</p>
+<blockquote>
+<div>return x + y</div></blockquote>
+<p>The first argument to Celery is the name of the current module, this is needed so that names can be automatically generated, the second argument is the broker keyword argument which specifies the URL of the message broker you want to use, using RabbitMQ here, which is already the default option. Don&#8217;t forget to replace the broker url and backend url to point to your installation location.</p>
+<p>You defined a single task, called add, which returns the sum of two numbers.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Application</a><ul>
+<li><a class="reference internal" href="#creating-task">Creating Task</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="resultbackend.html"
+                        title="previous chapter">Choosing the Result Backend</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="qlbs.html"
+                        title="next chapter">Queue Length Based Scheduler</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/app.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="qlbs.html" title="Queue Length Based Scheduler"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="resultbackend.html" title="Choosing the Result Backend"
+             >previous</a> |</li>
+        <li><a href="index.html">C-SyTS 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, sivabalan.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>

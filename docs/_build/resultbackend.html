@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Choosing the Result Backend &mdash; C-SyTS 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="C-SyTS 1.0 documentation" href="index.html" />
+    <link rel="next" title="Application" href="app.html" />
+    <link rel="prev" title="Choosing the Broker" href="broker.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="app.html" title="Application"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="broker.html" title="Choosing the Broker"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">C-SyTS 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="choosing-the-result-backend">
+<h1>Choosing the Result Backend<a class="headerlink" href="#choosing-the-result-backend" title="Permalink to this headline">¶</a></h1>
+<p>Celery needs to store or send the states somewhere to keep track of the tasks’ states.</p>
+<p>There are several choices available, including:</p>
+<div class="section" id="redis">
+<h2>Redis<a class="headerlink" href="#redis" title="Permalink to this headline">¶</a></h2>
+<p>Redis is an open source, BSD licensed, advanced key-value data store with optional durability.</p>
+<p>You can either download the latest Redis tar ball from the redis.io web site, or you can alternatively use this special URL that always points to the latest stable Redis version, that is, <a class="reference external" href="http://download.redis.io/redis-stable.tar.gz">http://download.redis.io/redis-stable.tar.gz</a>.</p>
+<p>In order to compile Redis follow this simple steps:</p>
+<p>wget <a class="reference external" href="http://download.redis.io/redis-stable.tar.gz">http://download.redis.io/redis-stable.tar.gz</a>
+tar xvzf redis-stable.tar.gz
+cd redis-stable
+make</p>
+<p>At this point you can try if your build works correctly typing make test, but this is an optional step. After the compilation the src directory inside the Redis distribution is populated with the different executables that are part of Redis:</p>
+<blockquote>
+<div>redis-server is the Redis Server itself.
+redis-cli is the command line interface utility to talk with Redis.
+redis-benchmark is used to check Redis performances.
+redis-check-aof and redis-check-dump are useful in the rare event of corrupted data files.</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Choosing the Result Backend</a><ul>
+<li><a class="reference internal" href="#redis">Redis</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="broker.html"
+                        title="previous chapter">Choosing the Broker</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="app.html"
+                        title="next chapter">Application</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/resultbackend.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="app.html" title="Application"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="broker.html" title="Choosing the Broker"
+             >previous</a> |</li>
+        <li><a href="index.html">C-SyTS 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, sivabalan.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>

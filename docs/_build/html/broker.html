@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Choosing the Broker &mdash; C-SyTS 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="C-SyTS 1.0 documentation" href="index.html" />
+    <link rel="next" title="Choosing the Result Backend" href="resultbackend.html" />
+    <link rel="prev" title="Celery" href="celery.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="resultbackend.html" title="Choosing the Result Backend"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="celery.html" title="Celery"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">C-SyTS 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="choosing-the-broker">
+<h1>Choosing the Broker<a class="headerlink" href="#choosing-the-broker" title="Permalink to this headline">¶</a></h1>
+<p>Celery requires a solution to send and receive messages, usually this comes in the form of a separate service called a message broker.</p>
+<p>There are several choices available, including:</p>
+<div class="section" id="rabbitmq">
+<h2>RabbitMQ<a class="headerlink" href="#rabbitmq" title="Permalink to this headline">¶</a></h2>
+<p>RabbitMQ is feature-complete, stable, durable and easy to install. It’s an excellent choice for a production environment. Detailed information about using RabbitMQ with Celery:</p>
+<blockquote>
+<div>Using RabbitMQ</div></blockquote>
+<p>If you are using Ubuntu or Debian install RabbitMQ by executing this command:</p>
+<p>$ sudo apt-get install rabbitmq-server</p>
+<p>When the command completes the broker is already running in the background, ready to move messages for you: Starting rabbitmq-server: SUCCESS.</p>
+<p>And don’t worry if you’re not running Ubuntu or Debian, you can go to this website to find similarly simple installation instructions for other platforms, including Microsoft Windows:</p>
+<blockquote>
+<div><a class="reference external" href="http://www.rabbitmq.com/download.html">http://www.rabbitmq.com/download.html</a></div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Choosing the Broker</a><ul>
+<li><a class="reference internal" href="#rabbitmq">RabbitMQ</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="celery.html"
+                        title="previous chapter">Celery</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="resultbackend.html"
+                        title="next chapter">Choosing the Result Backend</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/broker.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="resultbackend.html" title="Choosing the Result Backend"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="celery.html" title="Celery"
+             >previous</a> |</li>
+        <li><a href="index.html">C-SyTS 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, sivabalan.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>

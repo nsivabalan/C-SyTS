@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Prioritized Scheduler &mdash; C-SyTS 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="C-SyTS 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Queue Length Based Scheduler" href="qlbs.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="qlbs.html" title="Queue Length Based Scheduler"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">C-SyTS 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="prioritized-scheduler">
+<h1>Prioritized Scheduler<a class="headerlink" href="#prioritized-scheduler" title="Permalink to this headline">¶</a></h1>
+<p>Prioritized Scheduler is readily available from C-SyTS. Prioritized Scheduler assigns tasks based on the priority of each tasks. Incoming tasks can belong to either of high priority or low priority. High priority tasks are denoted as 0 and low priority as 1. Prioritized Scheduler gurantees a SLA of 30 mins for all high priority tasks and 60 mins for all low priority tasks. Tasks are generated on the fly within Prioritized Scheduler module. You can modify it to generate your own tasks if required.</p>
+<div class="section" id="invoking-prioritized-scheduler">
+<h2>Invoking Prioritized Scheduler<a class="headerlink" href="#invoking-prioritized-scheduler" title="Permalink to this headline">¶</a></h2>
+<p>python PrioritizedScheduler.py</p>
+<p>Please make sure to modify broker url and backend url in your celery instance. Also the available worker nodes are hard-coded as of now in QLBS.py module. Also, ensure that the task being invoked is actually defined in the application being used and is available in all remote worker nodes being used during task execution.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Prioritized Scheduler</a><ul>
+<li><a class="reference internal" href="#invoking-prioritized-scheduler">Invoking Prioritized Scheduler</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="qlbs.html"
+                        title="previous chapter">Queue Length Based Scheduler</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/prioritized.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="qlbs.html" title="Queue Length Based Scheduler"
+             >previous</a> |</li>
+        <li><a href="index.html">C-SyTS 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, sivabalan.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>
